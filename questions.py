@@ -50,6 +50,16 @@ def compare_periods(series, split):
     return {"before": v[~later].mean(), "after": v[later].mean(), "difference": observed, "p": extreme / count}
 
 
+def p_text(p):
+    """An exact permutation p is never 0, as the observed split always counts, so a small one reads as a bound."""
+    return "< 0.001" if p < .001 else f"{p:.3f}"
+
+
+def rounded_periods(periods):
+    """Three decimals for the file, except p, which rounding would turn into 0."""
+    return periods.round(3).assign(p=periods.p)
+
+
 def trends(years):
     rows = []
     for first in (data.FIRST_YEAR, STUDY_START):
@@ -228,10 +238,10 @@ def main():
 
     t, periods = trends(years)
     t.round(3).to_csv(OUTPUT / "trends.csv", index=False)
-    periods.round(3).to_csv(OUTPUT / "periods.csv", index=False)
+    rounded_periods(periods).to_csv(OUTPUT / "periods.csv", index=False)
     print(t.round(3).to_string())
     pd.DataFrame([{"first_year": f, "rank_correlation": stats.spearmanr(years.loc[f:].area_burned_ha, years.loc[f:].smoke_days)[0]} for f in (data.FIRST_YEAR, STUDY_START)]).round(3).to_csv(OUTPUT / "area_vs_smoke.csv", index=False)
-    print(periods.round(3).to_string())
+    print(periods.round(3).assign(p=periods.p.map(p_text)).to_string())
     area = years.loc[STUDY_START:]
     print("area burned vs smoke days, rank correlation", stats.spearmanr(area.area_burned_ha, area.smoke_days), "all years", stats.spearmanr(years.area_burned_ha, years.smoke_days))
 

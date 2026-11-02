@@ -19,6 +19,18 @@ def test_compare_periods_counts_every_arrangement():
     assert abs(c["p"] - 1 / 10) < 1e-9  # one of the ten ways to choose two later years is this extreme
 
 
+def test_small_p_is_never_shown_or_saved_as_zero():
+    s = pd.Series(np.arange(12.0), index=range(2000, 2012))
+    c = questions.compare_periods(s, 2008)
+    assert abs(c["p"] - 2 / 495) < 1e-12  # of the 495 ways to choose 4 of 12, only the last 4 and the first 4 are this far apart
+    tiny = pd.DataFrame([{"before": 1.23456, "after": 2.0, "difference": .76544, "p": 3.4e-6}, {"before": 1.0, "after": 2.0, "difference": 1.0, "p": .0051}])
+    saved = questions.rounded_periods(tiny)
+    assert saved.before[0] == 1.235
+    assert saved.p[0] == 3.4e-6
+    assert [questions.p_text(p) for p in tiny.p] == ["< 0.001", "0.005"]
+    assert questions.p_text(.001) == "0.001"
+
+
 def test_episodes_join_short_gaps_and_split_long_ones():
     days = pd.date_range("2020-07-01", "2020-07-20")
     share = pd.Series(0.0, index=days)

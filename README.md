@@ -54,7 +54,7 @@ As measured, annual PM2.5 has no trend since 2005 (−0.01 µg/m³ a year, 95% r
 
 ![Smoke days per station by year](figures/smoke_days.png)
 
-Smoke's share of annual PM2.5 rose 0.6 points a year since 2005 (0.2 to 1.3), and smoke days averaged 14 a year from 2017 on against 7 before. An exact permutation test gives p = 0.005 for that gap, but 2017 was picked after seeing the data, so that is generous. Leave out the three worst years and the trend in smoke days is +0.15 a year (−0.13 to +0.46). Twenty-one seasons with three extreme ones can't separate a lasting shift from a run of bad years.
+Smoke's share of annual PM2.5 rose 0.6 points a year since 2005 (0.2 to 1.3), and smoke days averaged 14 a year from 2017 on against 7 before. An exact permutation test gives p = 0.005 for that gap, and p < 0.001 for the gap in smoke's share (6% before 2017, 19% from then on), but 2017 was picked after seeing the data, so those are generous. Leave out the three worst years and the trend in smoke days is +0.15 a year (−0.13 to +0.46). Twenty-one seasons with three extreme ones can't separate a lasting shift from a run of bad years.
 
 ### 3. Which places get smoke together, and who lives there?
 
