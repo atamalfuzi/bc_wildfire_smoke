@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 
 import data
-from data import DATA, FIGURES, OUTPUT, STUDY_START
+from data import DATA, FIGURES, FIRST_YEAR, LAST_YEAR, OUTPUT, STUDY_START
 
 INK, MUTED, GREY, GRID = "#0b0b0b", "#52514e", "#a8a7a2", "#e6e5e1"
 BLUE, ORANGE, AQUA, YELLOW = "#2a78d6", "#eb6834", "#1baf7a", "#eda100"
@@ -23,6 +23,7 @@ plt.rcParams.update({"font.size": 11, "axes.spines.top": False, "axes.spines.rig
                      "axes.grid": True, "grid.color": GRID, "axes.axisbelow": True, "legend.frameon": False,
                      "axes.titlelocation": "left", "axes.titlecolor": INK, "axes.titlesize": 12})
 SOURCE = "Source: BC Ministry of Environment verified hourly air quality data."
+YEAR_WORDS = {12: "twelve", 13: "thirteen"}  # past these a caption uses digits
 
 
 def save(fig, name, title, subtitle, caption):
@@ -40,7 +41,7 @@ def with_without(y):
     ax.plot(y.index, y.measured, color=ORANGE, lw=2, marker="o", ms=4, label="As measured")
     ax.plot(y.index, y.without, color=BLUE, lw=2, marker="o", ms=4, label="Smoke days set back to the usual level")
     ax.set_ylim(0, 12.5)
-    ax.set_xticks(range(2005, 2026, 2))
+    ax.set_xticks(range(FIRST_YEAR, LAST_YEAR + 1, 2))
     ax.set_ylabel("Annual mean PM2.5, µg/m³")
     ax.grid(axis="x", visible=False)
     ax.legend(loc="upper left", ncol=2)
@@ -48,7 +49,7 @@ def with_without(y):
         ax.annotate(f"{y.share_8[yr]:.0%} smoke", (yr, y.measured[yr]), xytext=(-34 if yr == 2017 else 0, 8), textcoords="offset points", ha="center", color=MUTED)
     save(fig, "with_without.png", "Smoke sets the bad years, and hides a slow fall in the rest",
          "Annual PM2.5 across BC, as measured and with smoke days set back to each station's usual level",
-         "Station and year effects, regions weighted equally, 2005 to 2025. Readings put on one instrument's footing. " + SOURCE)
+         f"Station and year effects, regions weighted equally, {FIRST_YEAR} to {LAST_YEAR}. Readings put on one instrument's footing. " + SOURCE)
 
 
 def region_table(table, name, title, subtitle, caption, fmt, vmax):
@@ -72,6 +73,17 @@ def region_table(table, name, title, subtitle, caption, fmt, vmax):
     save(fig, name, title, subtitle, caption)
 
 
+def study_years():
+    return LAST_YEAR - STUDY_START + 1
+
+
+def reported_every_year(sy):
+    """Stations by region among those with a counted station-year in every study year."""
+    counts = sy[sy.year >= STUDY_START]
+    full = counts.groupby("st").year.nunique()
+    return counts[counts.st.isin(full[full == study_years()].index)].drop_duplicates("st").region.value_counts()
+
+
 def trap(y, fixed, regions):
     fig, ax = plt.subplots(figsize=(10, 5.2))
     fig.subplots_adjust(left=0.07, right=0.8, top=0.83, bottom=0.15)
@@ -80,14 +92,15 @@ def trap(y, fixed, regions):
     ax.plot(b.index, b, color=BLUE, lw=2, marker="o", ms=4, label="Only stations reporting every year")
     ax.set_ylabel("Smoke share of annual PM2.5, %")
     ax.set_ylim(0, 40)
-    ax.set_xticks(range(2014, 2026))
+    ax.set_xticks(range(STUDY_START, LAST_YEAR + 1))
     ax.grid(axis="x", visible=False)
     ax.legend(loc="upper left", ncol=2)
     for s, c, off, label in ((a, ORANGE, 2, "All stations"), (b, BLUE, -2, "Stations reporting\nevery year")):
-        ax.annotate(label, (2025, s[2025]), xytext=(8, off), textcoords="offset points", color=c, va="center")
+        ax.annotate(label, (LAST_YEAR, s[LAST_YEAR]), xytext=(8, off), textcoords="offset points", color=c, va="center")
+    span = study_years()
     save(fig, "station_trap.png", "Which stations you keep changes the answer",
          f"In 2023 smoke was {a[2023]:.0f}% of annual PM2.5 across BC, or {b[2023]:.0f}% on the stations that never stopped",
-         f"The {regions.sum()} stations reporting in all twelve years: {regions.get('Lower Mainland', 0)} in the Lower Mainland, {regions.get('Cariboo', 0)} in the Cariboo, {regions.get('Omineca-Peace', 0)} in Omineca-Peace. " + SOURCE)
+         f"The {regions.sum()} stations reporting in all {YEAR_WORDS.get(span, span)} years: {regions.get('Lower Mainland', 0)} in the Lower Mainland, {regions.get('Cariboo', 0)} in the Cariboo, {regions.get('Omineca-Peace', 0)} in Omineca-Peace. " + SOURCE)
 
 
 def validation(p, polygons, removed):
@@ -109,7 +122,7 @@ def validation(p, polygons, removed):
     ax.set_title("Satellite smoke maps, July to September")
     bx.plot(removed.index, removed.rule, color=ORANGE, lw=2, marker="o", ms=4, label="This rule")
     bx.plot(removed.index, removed.bc, color=BLUE, lw=2, marker="o", ms=4, label="BC's list of flagged days")
-    bx.set_xticks(range(2014, 2026, 2))
+    bx.set_xticks(range(STUDY_START, LAST_YEAR + 1, 2))
     bx.set_ylabel("Taken off annual PM2.5, µg/m³")
     bx.set_ylim(0, removed.rule.max() * 1.3)
     bx.grid(axis="x", visible=False)
@@ -144,12 +157,12 @@ def smoke_days(y):
     fig, ax = plt.subplots(figsize=(10, 5))
     fig.subplots_adjust(left=0.07, right=0.97, top=0.82, bottom=0.14)
     ax.bar(y.index, y.smoke_days, width=.8, color=[BLUE if v else GREY for v in y.index >= 2017])
-    ax.set_xticks(range(2005, 2026, 2))
+    ax.set_xticks(range(FIRST_YEAR, LAST_YEAR + 1, 2))
     ax.set_ylabel("Smoke days per station")
     ax.grid(axis="x", visible=False)
     before, after = y.smoke_days[y.index < 2017].mean(), y.smoke_days[y.index >= 2017].mean()
-    ax.annotate(f"2005 to 2016: {before:.0f} a year", (2010.5, y.smoke_days[y.index < 2017].max()), xytext=(0, 6), textcoords="offset points", ha="center", color=MUTED)
-    ax.annotate(f"2017 to 2025: {after:.0f} a year", (2021, y.smoke_days.max()), xytext=(0, 4), textcoords="offset points", ha="center", color=MUTED)
+    ax.annotate(f"{FIRST_YEAR} to 2016: {before:.0f} a year", ((FIRST_YEAR + 2016) / 2, y.smoke_days[y.index < 2017].max()), xytext=(0, 6), textcoords="offset points", ha="center", color=MUTED)
+    ax.annotate(f"2017 to {LAST_YEAR}: {after:.0f} a year", ((2017 + LAST_YEAR) / 2, y.smoke_days.max()), xytext=(0, 4), textcoords="offset points", ha="center", color=MUTED)
     ax.set_ylim(0, y.smoke_days.max() * 1.15)
     save(fig, "smoke_days.png", "More smoke days since 2017, but only a few very bad years", "Smoke days per station each year",
          "Station and year effects, regions weighted equally. The count depends on the threshold more than the share does; this uses 8 µg/m³. The 2017 break was picked after seeing the data. " + SOURCE)
@@ -183,7 +196,7 @@ def shed_map(st, sheds, outline_rings):
     ax.axis("off")
     ax.set_xlim(-139.5, -114)
     ax.legend(loc="lower left", fontsize=10, title="Smoke shed", title_fontsize=10)
-    save(fig, "sheds.png", "Smoke doesn't follow administrative lines", "Stations that get smoke on the same days, from July to September, 2014 to 2025",
+    save(fig, "sheds.png", "Smoke doesn't follow administrative lines", f"Stations that get smoke on the same days, from July to September, {STUDY_START} to {LAST_YEAR}",
          "Average-linkage clusters of station correlation; stations with too few summers join their nearest neighbour's shed. " + SOURCE)
 
 
@@ -230,9 +243,7 @@ def main():
     region_table(share.loc[order], "regions.png", "The worst place changes each year", "Smoke's share of annual PM2.5 by region, %",
                  "Average of stations with at least 274 valid days. Regions are BC's air monitoring regions. " + SOURCE, lambda v: f"{v:.0f}", 60)
     fixed = pd.read_csv(OUTPUT / "fixed_panel.csv", index_col=0)
-    counts = sy[sy.year >= STUDY_START]
-    full = counts.groupby("st").year.nunique()
-    trap(y, fixed, counts[counts.st.isin(full[full == 12].index)].drop_duplicates("st").region.value_counts())
+    trap(y, fixed, reported_every_year(sy))
     validation(p, pd.read_csv(DATA / "hms.csv", parse_dates=["DATE"]), pd.read_csv(OUTPUT / "removed_vs_bc.csv", index_col=0))
     instruments(pd.read_csv(OUTPUT / "instrument_offsets.csv"))
     smoke_days(y)

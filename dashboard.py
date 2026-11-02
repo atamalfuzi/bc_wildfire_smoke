@@ -1,4 +1,4 @@
-"""Seasonal dashboard for wildfire smoke in BC: this year's smoke days against 2014 to 2025, by region, from the unverified
+"""Seasonal dashboard for wildfire smoke in BC: this year's smoke days against the study's years, by region, from the unverified
 hourly file BC updates daily. Writes a static site to site/.
 
 Needs no history download: the study's usual levels and season history are in output/. Run from the repository folder:
@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 import data
-from data import OUTPUT
+from data import FIRST_YEAR, LAST_YEAR, OUTPUT, STUDY_START
 from smoke import HIGH, KIND, MIN_HOURS, SEASON, THRESHOLD, detect, harmonise, join_moved, neighbours
 
 SITE = Path("site")
@@ -193,6 +193,7 @@ def page(s, updated):
     state = (f"The {s['year']} season is over; this page next changes in May." if s["season_over"]
              else f"On {day_text(s['data_through'])}, {s['latest_flagged']} of {s['latest_reporting']} reporting stations were flagged as smoke and {s['latest_high']} were above 25 µg/m³.")
     rank = "the most of" if s["rank"] == 1 else f"number {s['rank']} of"
+    study = f"{STUDY_START} to {LAST_YEAR}"
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -200,7 +201,7 @@ def page(s, updated):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'" />
   <title>Wildfire smoke in BC: {s['year']} season | Ata Malfuzi</title>
-  <meta name="description" content="Smoke days at BC's air monitors this season against 2014 to 2025, by region, from BC's unverified hourly data." />
+  <meta name="description" content="Smoke days at BC's air monitors this season against {study}, by region, from BC's unverified hourly data." />
   <link rel="canonical" href="{URL}" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -213,18 +214,18 @@ def page(s, updated):
   <p class="note"><strong>These readings are unverified.</strong> BC checks and corrects its monitor data once a year, so numbers here can change. A smoke day is a rule's call from PM2.5 alone, not a measurement of smoke, and it says nothing about anyone's health. For current air quality advice, see <a href="https://www.env.gov.bc.ca/epd/bcairquality/readings/find-stations-map.html">BC's air quality site</a>.</p>
   <div class="cards">
     <section class="card"><h2>Smoke days per station so far</h2><p class="big">{s['smoke_days']:.0f}</p><p>Each region counted equally</p></section>
-    <section class="card"><h2>Usual by this date</h2><p class="big">{s['median_past']:.0f}</p><p>Median of the {s['years_compared']} years 2014 to 2025</p></section>
+    <section class="card"><h2>Usual by this date</h2><p class="big">{s['median_past']:.0f}</p><p>Median of the {s['years_compared']} years {study}</p></section>
     <section class="card"><h2>Rank among those years</h2><p class="big">{s['rank']} of {s['years_compared'] + 1}</p><p>{rank.capitalize()} {s['years_compared'] + 1} seasons to this date</p></section>
     <section class="card"><h2>Stations reporting</h2><p class="big">{s['stations_reporting']}</p><p>In the last seven days</p></section>
   </div>
   <p>{state}</p>
 
   <h2>The season so far</h2>
-  <figure><img src="season.png" alt="Lines of cumulative smoke days per station from May to October for each year from 2014 to 2025 in grey, with {s['year']} in blue reaching {s['smoke_days']:.0f} days." width="1600" height="760" />
-    <figcaption>Smoke days per station, added up from May 1. {s['year']} in blue, 2014 to 2025 in grey.</figcaption></figure>
+  <figure><img src="season.png" alt="Lines of cumulative smoke days per station from May to October for each year from {study} in grey, with {s['year']} in blue reaching {s['smoke_days']:.0f} days." width="1600" height="760" />
+    <figcaption>Smoke days per station, added up from May 1. {s['year']} in blue, {study} in grey.</figcaption></figure>
 
   <h2>By region</h2>
-  <p>Smoke days per station in each of BC's air monitoring regions, against the same dates in 2014 to 2025.</p>
+  <p>Smoke days per station in each of BC's air monitoring regions, against the same dates in {study}.</p>
   <div class="scroll"><table>
     <thead><tr><th scope="col">Region</th><th scope="col">{s['year']} so far</th><th scope="col">Median by this date</th><th scope="col">Highest by this date</th><th scope="col">Highest smoke day this season, µg/m³</th></tr></thead>
     <tbody>{rows}</tbody>
@@ -235,7 +236,7 @@ def page(s, updated):
     <figcaption>One row per station, grouped by region. Orange to dark red: flagged as smoke, darker for more PM2.5, up to 100 µg/m³. Grey: not flagged. White: no reading.</figcaption></figure>
 
   <h2>How a day counts</h2>
-  <p>From May to October, a station-day counts as smoke if it is at least 8 µg/m³ above that station's usual level for the time of year, and at least half of the reporting stations within 200 km are up by 4 µg/m³ or more. Usual levels come from the verified record for 2005 to 2025. The <a href="{WRITE_UP}">write-up</a> checks this rule against BC's own list and satellite smoke maps and sets out its limits.</p>
+  <p>From May to October, a station-day counts as smoke if it is at least 8 µg/m³ above that station's usual level for the time of year, and at least half of the reporting stations within 200 km are up by 4 µg/m³ or more. Usual levels come from the verified record for {FIRST_YEAR} to {LAST_YEAR}. The <a href="{WRITE_UP}">write-up</a> checks this rule against BC's own list and satellite smoke maps and sets out its limits.</p>
   <footer>
     <p>Personal project: my own analysis of publicly available data. It is not associated with my work for any current or past employer and does not represent their views.</p>
     <p>Contains information licensed under the Open Government Licence - British Columbia. Unverified hourly data from the BC Ministry of Environment.</p>

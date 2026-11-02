@@ -58,6 +58,17 @@ def test_page_has_no_missing_values():
     assert "unverified" in html
 
 
+def test_page_names_the_study_years_from_last_year(monkeypatch):
+    raw, st, base, offsets, history = setting()
+    p, year = dashboard.season_panel(raw, st, base, offsets, pd.Series(dtype=str))
+    s = dashboard.summary(p, dashboard.daily_share(p), history, year, "2026-06-29")
+    assert "2014 to 2025" in dashboard.page(s, "2026-06-30")
+    monkeypatch.setattr(dashboard, "LAST_YEAR", 2026)
+    html = dashboard.page(s, "2026-06-30")
+    assert "2014 to 2026" in html and "2005 to 2026" in html
+    assert "2025" not in html
+
+
 def test_problems_stop_a_stale_or_thin_file():
     raw, st, base, offsets, _ = setting()
     p, year = dashboard.season_panel(raw, st, base, offsets, pd.Series(dtype=str))

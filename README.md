@@ -152,7 +152,7 @@ python figures.py
 python site_data.py
 ```
 
-Run them from the repository folder, in this order. `data.py` passes about 3 GB through but keeps only daily summaries in `data/`, about 100 MB, and later runs reuse them. The NOAA polygons at its end take about an hour. The rest takes about 10 minutes. Verified data are published once a year, usually by August: delete `data/` and raise `LAST_YEAR` in `data.py` to add a year.
+Run them from the repository folder, in this order. `data.py` passes about 3 GB through but keeps only daily summaries in `data/`, about 100 MB, and later runs reuse them. The NOAA polygons at its end take about an hour. The rest takes about 10 minutes. Verified data are published once a year, usually by August: delete `data/` and raise `LAST_YEAR` in `data.py` to add a year. The code, charts and dashboard pick up the new year from it, but this README's numbers are written by hand, and `questions.py` stops if the smoke sheds no longer match the names it holds.
 
 To build the dashboard, run `python dashboard.py`. It needs no downloads beyond BC's current file, because the usual levels and season history are in `output/`. It writes a static site to `site/` and stops without writing if the file is stale, thin or full of implausible values. The [dashboard workflow](.github/workflows/dashboard.yml) does the same on GitHub Actions every day from May to October and publishes to GitHub Pages only if every step passes.
 
