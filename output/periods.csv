@@ -1,0 +1,4 @@
+series,before,after,difference,p
+Smoke days per station,6.891,14.391,7.5,0.005
+Smoke share,0.06,0.192,0.132,0.0
+PM2.5 with smoke removed,6.837,6.253,-0.584,0.012

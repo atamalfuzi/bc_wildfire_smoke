@@ -1,0 +1,85 @@
+region,year,r2
+Cariboo,2014,0.63
+Cariboo,2015,-1.178
+Cariboo,2016,0.007
+Cariboo,2017,0.014
+Cariboo,2018,0.435
+Cariboo,2019,0.058
+Cariboo,2020,0.026
+Cariboo,2021,0.262
+Cariboo,2022,-0.115
+Cariboo,2023,-2.387
+Cariboo,2024,-4.356
+Cariboo,2025,0.337
+Kootenay,2014,-0.256
+Kootenay,2015,0.24
+Kootenay,2016,-118.7
+Kootenay,2017,-0.137
+Kootenay,2018,0.282
+Kootenay,2019,-0.245
+Kootenay,2020,0.011
+Kootenay,2021,-0.024
+Kootenay,2022,0.196
+Kootenay,2023,-1.057
+Kootenay,2024,-3.759
+Kootenay,2025,0.339
+Lower Mainland,2014,-0.693
+Lower Mainland,2015,-0.072
+Lower Mainland,2016,-0.336
+Lower Mainland,2017,0.107
+Lower Mainland,2018,0.283
+Lower Mainland,2019,-0.113
+Lower Mainland,2020,-0.03
+Lower Mainland,2021,-0.066
+Lower Mainland,2022,0.129
+Lower Mainland,2023,-1.808
+Lower Mainland,2024,-6.21
+Lower Mainland,2025,0.336
+Omineca-Peace,2014,0.348
+Omineca-Peace,2015,0.085
+Omineca-Peace,2016,0.027
+Omineca-Peace,2017,-1.551
+Omineca-Peace,2018,0.576
+Omineca-Peace,2019,-0.14
+Omineca-Peace,2020,-0.096
+Omineca-Peace,2021,0.14
+Omineca-Peace,2022,-0.045
+Omineca-Peace,2023,0.197
+Omineca-Peace,2024,0.35
+Omineca-Peace,2025,0.346
+Skeena,2014,-0.155
+Skeena,2015,0.242
+Skeena,2016,-0.117
+Skeena,2017,-0.207
+Skeena,2018,0.016
+Skeena,2019,-0.66
+Skeena,2020,-0.946
+Skeena,2021,-3.302
+Skeena,2022,-0.527
+Skeena,2023,-0.541
+Skeena,2024,-0.088
+Skeena,2025,0.375
+Southern Interior,2014,0.139
+Southern Interior,2015,0.166
+Southern Interior,2016,-7.649
+Southern Interior,2017,0.06
+Southern Interior,2018,0.444
+Southern Interior,2019,-0.893
+Southern Interior,2020,0.085
+Southern Interior,2021,-0.046
+Southern Interior,2022,-0.265
+Southern Interior,2023,-0.643
+Southern Interior,2024,-12.634
+Southern Interior,2025,0.474
+Vancouver Island,2014,-1.311
+Vancouver Island,2015,-0.045
+Vancouver Island,2016,-0.473
+Vancouver Island,2017,0.013
+Vancouver Island,2018,0.111
+Vancouver Island,2019,-0.183
+Vancouver Island,2020,-0.041
+Vancouver Island,2021,-1.987
+Vancouver Island,2022,0.13
+Vancouver Island,2023,-3.692
+Vancouver Island,2024,-9.765
+Vancouver Island,2025,0.245

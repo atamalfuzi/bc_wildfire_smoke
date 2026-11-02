@@ -1,0 +1,5 @@
+model,mean_error,caught_high,false_alarms,caught_first_days,first_days,range_covers,range_covers_high_days
+Tomorrow equals today,3.201,0.647,0.348,0.0,1475,,
+Monitor network,2.997,0.459,0.255,0.08,1475,0.896,0.444
+Fire power by distance alone,4.093,0.16,0.514,0.098,1475,0.896,0.235
+Network and fire power,2.981,0.483,0.237,0.102,1475,0.896,0.469

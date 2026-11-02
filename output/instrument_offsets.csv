@@ -1,0 +1,7 @@
+season,instrument,offset,low,high,station_years
+cold,BAM,-0.085,-0.519,0.373,238
+cold,T640,0.591,0.311,0.908,41
+cold,TEOM,-2.557,-3.147,-2.028,349
+warm,BAM,-0.344,-0.754,0.022,248
+warm,T640,0.145,-0.337,0.531,41
+warm,TEOM,-1.925,-2.236,-1.53,349

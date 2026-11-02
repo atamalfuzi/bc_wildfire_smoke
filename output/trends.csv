@@ -1,0 +1,10 @@
+from,series,slope,low,high,kendall_p
+2005,PM2.5 as measured,-0.008,-0.058,0.064,0.88
+2005,PM2.5 with smoke removed,-0.069,-0.097,-0.03,0.001
+2005,Smoke days per station,0.3,-0.064,0.77,0.075
+2005,Smoke share,0.006,0.002,0.013,0.004
+2014,PM2.5 as measured,-0.1,-0.344,0.186,0.303
+2014,PM2.5 with smoke removed,-0.11,-0.185,-0.052,0.011
+2014,Smoke days per station,0.388,-1.45,2.234,0.638
+2014,Smoke share,0.004,-0.02,0.023,0.459
+2005,"Smoke days per station, leaving out the 3 worst years",0.148,-0.129,0.462,0.26

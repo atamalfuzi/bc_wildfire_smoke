@@ -1,0 +1,15 @@
+check,value,other,note
+BC-listed station-days the rule also flags,0.9661581137309293,,3605 days
+BC-listed days above 25 ug/m3,0.9988904299583912,,
+"May-Oct days at 10 to 15 ug/m3: flagged by the rule, on BC's list",0.13848429676832044,0.0,8788 days
+"May-Oct days at 15 to 25 ug/m3: flagged by the rule, on BC's list",0.720324814903272,0.0007165034631000717,4187 days
+"May-Oct days at 25 to 50 ug/m3: flagged by the rule, on BC's list",0.9391891891891891,0.7550675675675675,2368 days
+"May-Oct days at 50 to 10000 ug/m3: flagged by the rule, on BC's list",0.9806034482758621,0.9768318965517241,1856 days
+"Nov-Apr station-days above 25 ug/m3, left out by design",1174.0,,"Valemount, Houston Firehall, Vanderhoof Courthouse"
+"Under any satellite smoke polygon: rule's days, other days",0.9287799182720373,0.284441066740362,"546 days, Jul-Sep"
+"Under a medium or heavy polygon: rule's days, other days",0.783420899007589,0.09586154483902169,
+Polygon overhead but under 2 ug/m3 of excess at the ground,0.4563770147161878,,
+AUC of the PM2.5/PM10 ratio alone for the rule's days,0.8641878470416895,,
+"PM2.5/PM10 ratio, Jul-Sep: rule's days, other days",0.7742751317596968,0.447826735984022,"32 stations, 2018, 2021, 2023"
+"Carbon monoxide, ppm, Jul-Sep: rule's days, other days",0.32573913541666666,0.15837983061594202,"19 stations, 2018, 2021, 2023"
+"Yearly amount removed, rule against BC's figures (correlation)",0.9940179225243713,,81 stations
