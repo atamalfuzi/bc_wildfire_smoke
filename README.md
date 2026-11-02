@@ -33,8 +33,8 @@ Smoke was 33% of annual PM2.5 in 2018 and in 2023, and 27% in 2017. Across thres
 |---|---|
 | Days on BC's list that the rule also flags | 97% of 3,605 |
 | Yearly amount removed, against BC's figures | Correlation 0.99; the rule removes somewhat more, because BC's list holds almost only days above 25 µg/m³ |
-| Under a satellite smoke polygon, July to September | 93% of the rule's days, 28% of other days (546 days) |
-| Under a medium or heavy polygon | 78% against 10% |
+| Under a satellite smoke polygon, July to September | 93% of the rule's days, 33% of other days (1,064 days) |
+| Under a medium or heavy polygon | 77% against 10% |
 | PM2.5 as a share of PM10 | 0.77 on the rule's days, 0.45 on others (32 stations, 3 years) |
 | Carbon monoxide | 0.33 ppm against 0.16 ppm (19 stations, 3 years) |
 
@@ -112,14 +112,14 @@ Measuring whether people avoid smoke using Mobi bike-share trips, the one econom
 ## Limits
 
 - The rule uses PM2.5 alone. Spring and fall open burning, dust and regional pollution can pass as smoke, and light smoke can be missed. There is no ground truth for lighter days: 14% of May to October days at 10 to 15 µg/m³ get flagged, with little to confirm them.
-- Satellite polygons show smoke anywhere overhead. About 46% of station-days under one had less than 2 µg/m³ of excess at the ground, so they are strong evidence that a flagged day is real and weak evidence that an unflagged day is clean.
+- Satellite polygons show smoke anywhere overhead. About 51% of station-days under one had less than 2 µg/m³ of excess at the ground, so they are strong evidence that a flagged day is real and weak evidence that an unflagged day is clean.
 - Counts of smoke days depend on the threshold: 5,517 flagged station-days at 12 µg/m³ since 2014, 8,278 at 8 and 13,203 at 5. Shares are far steadier, so they are the headline.
 - Usual levels come from the same readings they are tested against. A median resists smoke, but long smoke seasons can still raise it a little.
 - Instrument gaps are estimated on seasonal medians and applied as flat offsets. How instruments compare in heavy smoke isn't tested, and the T640 has only one or two years behind it at most stations.
 - The north has few monitors, and one station can stand for a very large area. Weighting regions equally is a choice, and weighting by population tells a different story.
 - BC's list of flagged days exists to adjust air-management reporting, so it is not a complete count of smoke days. 99.9% of its days are above 25 µg/m³.
 - Fire perimeters are final footprints with one date. Satellites miss fires under cloud or thick smoke, and their sensors changed over the years, so fire power isn't comparable across years without care.
-- Polygons cover July to September only, for 546 of the 1,104 days from 2014 to 2025: the server drops quick requests.
+- Polygons cover July to September only, for 1,064 of the 1,104 days from 2014 to 2025: the server drops quick requests.
 - Nothing here estimates illness, deaths or costs, or says what any level means for a person's health.
 
 ## Data

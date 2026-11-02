@@ -1,34 +1,34 @@
 start,end,days,stations_hit,station_days,excess_station_days,high_station_days,peak,peak_station,regions,under_polygon,bc_listed,named_fires,"Alberta, NWT, Yukon",BC,Elsewhere,"Oregon, California","Washington, Idaho, Montana"
-2018-08-07,2018-08-29,23,62,810,47687,593,883,Burns Lake Fire Centre,"Lower Mainland, Omineca-Peace, Vancouver Island",0.92,514,,0.02,0.763,0.042,0.083,0.092
+2018-08-07,2018-08-29,23,62,810,47687,593,883,Burns Lake Fire Centre,"Lower Mainland, Omineca-Peace, Vancouver Island",0.93,514,,0.02,0.763,0.042,0.083,0.092
 2020-09-08,2020-09-19,12,58,394,29965,332,423,Castlegar Zinio Park,"Lower Mainland, Vancouver Island, Kootenay",1.0,325,,0.003,0.003,0.047,0.745,0.203
-2017-08-01,2017-08-17,17,60,583,24532,462,282,Prince George Plaza 400,"Lower Mainland, Vancouver Island, Southern Interior",,428,,0.504,0.394,0.003,0.032,0.068
-2023-08-15,2023-08-29,15,68,478,17934,307,596,Kamloops Federal Building,"Lower Mainland, Omineca-Peace, Southern Interior",0.98,283,Kookipi Creek; Donnie Creek Complex and Stoddart Creek Wildfire; Lower East Adams,0.664,0.288,0.0,0.028,0.021
-2025-08-27,2025-09-11,16,63,369,9566,182,194,Willow Creek Mine,"Lower Mainland, Omineca-Peace, Kootenay",,162,,0.58,0.284,0.136,,
+2017-08-01,2017-08-17,17,60,583,24532,462,282,Prince George Plaza 400,"Lower Mainland, Vancouver Island, Southern Interior",1.0,428,,0.504,0.394,0.003,0.032,0.068
+2023-08-15,2023-08-29,15,68,478,17934,307,596,Kamloops Federal Building,"Lower Mainland, Omineca-Peace, Southern Interior",0.99,283,Kookipi Creek; Donnie Creek Complex and Stoddart Creek Wildfire; Lower East Adams,0.664,0.288,0.0,0.028,0.021
+2025-08-27,2025-09-11,16,63,369,9566,182,194,Willow Creek Mine,"Lower Mainland, Omineca-Peace, Kootenay",0.95,162,,0.58,0.284,0.136,,
 2023-07-04,2023-07-16,13,49,216,9267,131,266,Vanderhoof Courthouse,"Omineca-Peace, Lower Mainland, Skeena",1.0,132,Nation River; Tatuk Lake,0.649,0.346,0.001,0.003,0.001
 2021-07-30,2021-08-04,6,34,112,8046,84,392,Castlegar Zinio Park,"Omineca-Peace, Southern Interior, Kootenay",1.0,77,"100 Mile Northeast Complex: South of Canim Lake, Succour Lake, Flat Lake, Young Lake, Churn Creek Protected Area; White Rock Lake; Sparks Lake Complex: Sparks Lake, Embleton Mountain, Tremont Creek",0.318,0.285,0.099,0.171,0.127
 2022-10-14,2022-10-20,7,58,252,7814,128,208,Chilliwack Airport,"Lower Mainland, Vancouver Island, Omineca-Peace",,122,NW Pasayten Complex; Battleship Mountain Wildfire; Kootenai Complex,0.151,0.277,0.009,0.051,0.512
 2023-05-16,2023-05-19,4,37,93,7222,66,461,Fort St John Key Learning Centre,"Omineca-Peace, Kootenay, Lower Mainland",,64,Eagle Fire Complex; Clearhills County; Red Creek,0.823,0.174,0.001,0.001,0.001
-2017-09-05,2017-09-08,4,60,194,6930,131,159,Nelson Kutenai Place,"Lower Mainland, Vancouver Island, Southern Interior",,107,,0.137,0.122,0.004,0.203,0.533
-2022-09-10,2022-09-15,6,54,234,6314,108,203,Hudsons Hope Dudley Drive,"Lower Mainland, Vancouver Island, Kootenay",,105,NW Pasayten Complex; Bolt Creek Fire; Battleship Mountain Wildfire,0.013,0.295,0.013,0.317,0.362
+2017-09-05,2017-09-08,4,60,194,6930,131,159,Nelson Kutenai Place,"Lower Mainland, Vancouver Island, Southern Interior",0.98,107,,0.137,0.122,0.004,0.203,0.533
+2022-09-10,2022-09-15,6,54,234,6314,108,203,Hudsons Hope Dudley Drive,"Lower Mainland, Vancouver Island, Kootenay",1.0,105,NW Pasayten Complex; Bolt Creek Fire; Battleship Mountain Wildfire,0.013,0.295,0.013,0.317,0.362
 2021-08-12,2021-08-15,4,52,108,5705,87,210,Vernon Science Centre,"Lower Mainland, Vancouver Island, Southern Interior",1.0,85,"Cascades Complex: July Mountain, Brook Creek, Garrison Lake; White Rock Lake; Shuswap Complex: Hunakwa Lake, Three Valley Lake, Two Mile Road, Bunting Road, Crazy Creek Gorge FSR, Momich Lake",0.009,0.497,0.008,0.283,0.203
-2015-07-05,2015-07-09,5,52,182,5120,93,261,Whistler Meadow Park,"Lower Mainland, Vancouver Island, Southern Interior",0.94,78,,0.864,0.123,0.0,0.005,0.008
-2024-07-19,2024-07-22,4,21,66,3767,46,319,Fort St John Key Learning Centre,"Omineca-Peace, Kootenay, Southern Interior",,44,Nogah Creek; Antler Creek; Sabina Lake,0.669,0.214,0.0,0.094,0.023
+2015-07-05,2015-07-09,5,52,182,5120,93,261,Whistler Meadow Park,"Lower Mainland, Vancouver Island, Southern Interior",0.96,78,,0.864,0.123,0.0,0.005,0.008
+2024-07-19,2024-07-22,4,21,66,3767,46,319,Fort St John Key Learning Centre,"Omineca-Peace, Kootenay, Southern Interior",1.0,44,Nogah Creek; Antler Creek; Sabina Lake,0.669,0.214,0.0,0.094,0.023
 2023-09-02,2023-09-05,4,21,55,3282,41,223,Quesnel,"Omineca-Peace, Cariboo, Kootenay",1.0,44,Big Creek Wildfire; Oppy Lake; Tatuk Lake,0.299,0.679,0.0,0.018,0.003
 2022-10-03,2022-10-09,7,47,207,3175,35,66,Hudsons Hope Dudley Drive,"Lower Mainland, Omineca-Peace, Southern Interior",,30,Battleship Mountain Wildfire; NW Pasayten Complex; Kootenai Complex,0.589,0.257,0.002,0.03,0.122
-2023-09-12,2023-09-17,6,14,59,2923,39,221,Willow Creek Mine,"Omineca-Peace, Cariboo, Southern Interior",0.94,39,Big Creek Wildfire; Oppy Lake; Tatuk Lake,0.535,0.445,0.001,0.008,0.012
-2017-07-17,2017-07-19,3,28,48,2572,29,288,Williams Lake Columneetza School,"Southern Interior, Lower Mainland, Kootenay",,28,,0.054,0.888,0.028,0.001,0.028
+2023-09-12,2023-09-17,6,14,59,2923,39,221,Willow Creek Mine,"Omineca-Peace, Cariboo, Southern Interior",0.95,39,Big Creek Wildfire; Oppy Lake; Tatuk Lake,0.535,0.445,0.001,0.008,0.012
+2017-07-17,2017-07-19,3,28,48,2572,29,288,Williams Lake Columneetza School,"Southern Interior, Lower Mainland, Kootenay",0.98,28,,0.054,0.888,0.028,0.001,0.028
 2021-07-09,2021-07-15,7,19,89,2495,50,122,Quesnel,"Omineca-Peace, Southern Interior, Kootenay",1.0,46,"Cutoff Creek; Sparks Lake Complex: Sparks Lake, Embleton Mountain, Tremont Creek; Okanagan Complex: Thomas Creek, Brenda Creek, Nk’Mip Creek",0.34,0.236,0.016,0.281,0.127
-2018-07-25,2018-07-31,7,57,184,2321,13,36,Quesnel,"Lower Mainland, Skeena, Omineca-Peace",1.0,8,,0.084,0.172,0.123,0.359,0.262
-2018-09-03,2018-09-07,5,55,124,2297,31,138,Castlegar Zinio Park,"Lower Mainland, Skeena, Southern Interior",0.65,19,,0.002,0.359,0.038,0.412,0.189
-2014-07-12,2014-07-18,7,32,91,2194,28,123,Quesnel West Correlieu School,"Cariboo, Lower Mainland, Kootenay",0.73,22,,0.542,0.283,0.0,0.103,0.071
+2018-07-25,2018-07-31,7,57,184,2321,13,36,Quesnel,"Lower Mainland, Skeena, Omineca-Peace",0.9,8,,0.084,0.172,0.123,0.359,0.262
+2018-09-03,2018-09-07,5,55,124,2297,31,138,Castlegar Zinio Park,"Lower Mainland, Skeena, Southern Interior",0.58,19,,0.002,0.359,0.038,0.412,0.189
+2014-07-12,2014-07-18,7,32,91,2194,28,123,Quesnel West Correlieu School,"Cariboo, Lower Mainland, Kootenay",0.78,22,,0.542,0.283,0.0,0.103,0.071
 2018-10-16,2018-10-23,8,47,169,2076,14,49,Valemount,"Lower Mainland, Vancouver Island, Omineca-Peace",,0,,0.097,0.533,0.011,0.215,0.143
 2021-06-27,2021-06-30,4,57,136,1851,14,35,Powell River James Thomson School,"Lower Mainland, Omineca-Peace, Vancouver Island",,0,,0.122,0.625,0.0,0.236,0.017
-2017-07-11,2017-07-12,2,19,30,1367,19,273,Williams Lake Columneetza School,"Omineca-Peace, Southern Interior, Kootenay",,16,,0.045,0.773,0.104,0.026,0.052
-2017-08-29,2017-08-31,3,38,56,1361,30,65,Nelson Kutenai Place,"Lower Mainland, Southern Interior, Kootenay",,26,,0.168,0.218,0.025,0.191,0.397
+2017-07-11,2017-07-12,2,19,30,1367,19,273,Williams Lake Columneetza School,"Omineca-Peace, Southern Interior, Kootenay",1.0,16,,0.045,0.773,0.104,0.026,0.052
+2017-08-29,2017-08-31,3,38,56,1361,30,65,Nelson Kutenai Place,"Lower Mainland, Southern Interior, Kootenay",1.0,26,,0.168,0.218,0.025,0.191,0.397
 2017-10-27,2017-10-31,5,43,96,1357,24,50,Harmac Cedar Woobank,"Lower Mainland, Vancouver Island, Omineca-Peace",,0,,0.048,0.683,0.005,0.141,0.122
-2024-09-06,2024-09-08,3,26,44,1108,14,139,Vanderhoof Courthouse,"Omineca-Peace, Lower Mainland, Southern Interior",,17,Sabina Lake,0.211,0.233,0.02,0.267,0.269
+2024-09-06,2024-09-08,3,26,44,1108,14,139,Vanderhoof Courthouse,"Omineca-Peace, Lower Mainland, Southern Interior",1.0,17,Sabina Lake,0.211,0.233,0.02,0.267,0.269
 2019-05-25,2019-05-30,6,28,76,1037,10,39,Fort St John Key Learning Centre,"Omineca-Peace, Skeena, Lower Mainland",,2,,0.986,0.011,0.002,0.0,0.0
-2024-08-08,2024-08-11,4,44,71,941,11,49,Prince George Plaza 400,"Lower Mainland, Omineca-Peace, Skeena",,7,Sabina Lake; Nogah Creek; Dogtooth FSR,0.843,0.063,0.005,0.049,0.039
+2024-08-08,2024-08-11,4,44,71,941,11,49,Prince George Plaza 400,"Lower Mainland, Omineca-Peace, Skeena",1.0,7,Sabina Lake; Nogah Creek; Dogtooth FSR,0.843,0.063,0.005,0.049,0.039
 2020-10-01,2020-10-03,3,39,75,919,4,28,Powell River James Thomson School,"Lower Mainland, Vancouver Island, Cariboo",,3,,0.025,0.01,0.034,0.89,0.041
 2023-06-07,2023-06-08,2,35,41,911,11,88,Hudsons Hope Dudley Drive,"Lower Mainland, Omineca-Peace, Southern Interior",,10,"West Kiskatinaw River; Chehalis River; Pembina Creek Complex, Grizzley Complex",0.401,0.597,0.0,0.001,0.001
 2023-08-05,2023-08-07,3,21,45,895,19,85,Vernon Science Centre,"Omineca-Peace, Kootenay, Southern Interior",1.0,16,Lower East Adams; 2023GL1; Horsethief Creek,0.708,0.223,0.001,0.027,0.041
@@ -36,25 +36,25 @@ start,end,days,stations_hit,station_days,excess_station_days,high_station_days,p
 2023-06-14,2023-06-15,2,17,25,867,17,107,Fort St John 85th Avenue,"Omineca-Peace, Kootenay, Southern Interior",,14,West Kiskatinaw River; Big Creek Wildfire; Chehalis River,0.64,0.357,0.0,0.002,0.001
 2023-07-20,2023-07-21,2,12,20,820,19,69,Houston Firehall,"Omineca-Peace, Skeena, Cariboo",1.0,22,Nation River; Tintagel; Tatuk Lake,0.743,0.181,0.001,0.053,0.022
 2014-08-11,2014-08-13,3,41,57,817,12,43,Prince George Plaza 400,"Lower Mainland, Omineca-Peace, Southern Interior",0.58,8,,0.541,0.326,0.0,0.052,0.081
-2014-08-23,2014-08-26,4,36,73,805,4,28,Prince George Plaza 400,"Lower Mainland, Vancouver Island, Skeena",0.82,1,,0.692,0.218,,0.078,0.012
-2022-07-28,2022-07-30,3,35,61,795,8,49,Peace Valley Attachie Flat Upper Terrace,"Lower Mainland, Omineca-Peace, Vancouver Island",,8,2022WL014,0.637,0.162,,0.038,0.162
+2014-08-23,2014-08-26,4,36,73,805,4,28,Prince George Plaza 400,"Lower Mainland, Vancouver Island, Skeena",0.73,1,,0.692,0.218,,0.078,0.012
+2022-07-28,2022-07-30,3,35,61,795,8,49,Peace Valley Attachie Flat Upper Terrace,"Lower Mainland, Omineca-Peace, Vancouver Island",1.0,8,2022WL014,0.637,0.162,,0.038,0.162
 2021-07-19,2021-07-20,2,12,20,653,8,236,Castlegar Zinio Park,"Omineca-Peace, Southern Interior, Kootenay",1.0,7,"Sparks Lake Complex: Sparks Lake, Embleton Mountain, Tremont Creek; Shuswap Complex: Hunakwa Lake, Three Valley Lake, Two Mile Road, Bunting Road, Crazy Creek Gorge FSR, Momich Lake; Chuweah Creek Fire",0.181,0.228,0.043,0.36,0.189
-2015-08-27,2015-08-27,1,9,9,601,5,253,Grand Forks City Hall,"Lower Mainland, Kootenay, Southern Interior",,4,,0.004,0.025,0.004,0.137,0.831
+2015-08-27,2015-08-27,1,9,9,601,5,253,Grand Forks City Hall,"Lower Mainland, Kootenay, Southern Interior",0.67,4,,0.004,0.025,0.004,0.137,0.831
 2019-10-30,2019-10-31,2,34,43,586,8,46,Vancouver Clark Drive,"Lower Mainland, Vancouver Island, Skeena",,0,,0.008,0.761,,0.08,0.151
-2024-08-15,2024-08-17,3,18,36,580,10,34,Fort St John Old Fort,"Omineca-Peace, Skeena, Cariboo",,8,Nogah Creek; Sabina Lake; The Shetland Creek Wildfire,0.839,0.088,0.042,0.008,0.023
-2022-09-02,2022-09-03,2,19,25,537,9,70,Sparwood Centennial Square,"Kootenay, Southern Interior, Lower Mainland",,8,Kootenai Complex; NW Pasayten Complex,0.072,0.295,0.001,0.374,0.258
+2024-08-15,2024-08-17,3,18,36,580,10,34,Fort St John Old Fort,"Omineca-Peace, Skeena, Cariboo",1.0,8,Nogah Creek; Sabina Lake; The Shetland Creek Wildfire,0.839,0.088,0.042,0.008,0.023
+2022-09-02,2022-09-03,2,19,25,537,9,70,Sparwood Centennial Square,"Kootenay, Southern Interior, Lower Mainland",1.0,8,Kootenai Complex; NW Pasayten Complex,0.072,0.295,0.001,0.374,0.258
 2014-09-16,2014-09-17,2,31,46,530,4,37,Quesnel,"Lower Mainland, Skeena, Omineca-Peace",0.11,0,,0.04,0.315,0.004,0.504,0.138
 2025-06-21,2025-06-22,2,17,33,523,4,54,Willow Creek Mine,"Omineca-Peace, Skeena, Cariboo",,3,,0.625,0.183,0.192,,
-2017-09-16,2017-09-17,2,26,39,484,2,43,Kamloops Aberdeen,"Lower Mainland, Southern Interior, Kootenay",,3,,0.037,0.058,0.129,0.289,0.488
+2017-09-16,2017-09-17,2,26,39,484,2,43,Kamloops Aberdeen,"Lower Mainland, Southern Interior, Kootenay",0.46,3,,0.037,0.058,0.129,0.289,0.488
 2015-10-17,2015-10-18,2,28,37,413,0,24,Langley Central,"Lower Mainland, Vancouver Island, Omineca-Peace",,0,,0.253,0.471,0.014,0.029,0.233
 2023-09-21,2023-09-22,2,22,33,402,1,41,Willow Creek Mine,"Omineca-Peace, Lower Mainland, Southern Interior",1.0,1,Big Creek Wildfire,0.574,0.395,0.009,0.018,0.004
 2025-06-11,2025-06-11,1,10,10,388,9,96,Hudsons Hope Dudley Drive,"Omineca-Peace, Cariboo, Kootenay",,10,,0.225,0.772,0.003,,
 2015-08-12,2015-08-13,2,16,25,277,0,24,Agassiz,"Lower Mainland, Southern Interior, Kootenay",1.0,0,,0.223,0.008,0.001,0.246,0.522
-2022-09-27,2022-09-27,1,23,23,262,0,21,Agassiz,"Lower Mainland, Vancouver Island, Southern Interior",,0,,0.541,0.036,0.0,0.072,0.351
+2022-09-27,2022-09-27,1,23,23,262,0,21,Agassiz,"Lower Mainland, Vancouver Island, Southern Interior",1.0,0,,0.541,0.036,0.0,0.072,0.351
 2015-10-01,2015-10-02,2,15,23,223,0,19,Langley Central,"Lower Mainland, Vancouver Island",,0,,0.09,0.393,0.056,0.024,0.436
 2020-10-31,2020-10-31,1,15,15,216,3,46,Vancouver Clark Drive,"Lower Mainland, Vancouver Island",,0,,0.007,0.255,0.03,0.085,0.623
-2025-09-20,2025-09-20,1,11,11,136,2,31,Grand Forks City Hall,"Kootenay, Lower Mainland, Southern Interior",,1,,0.192,0.173,0.635,,
-2024-07-09,2024-07-09,1,13,13,121,0,17,North Delta,"Lower Mainland, Skeena, Kootenay",,0,,0.449,0.435,0.017,0.043,0.056
+2025-09-20,2025-09-20,1,11,11,136,2,31,Grand Forks City Hall,"Kootenay, Lower Mainland, Southern Interior",0.91,1,,0.192,0.173,0.635,,
+2024-07-09,2024-07-09,1,13,13,121,0,17,North Delta,"Lower Mainland, Skeena, Kootenay",1.0,0,,0.449,0.435,0.017,0.043,0.056
 2018-10-12,2018-10-12,1,10,10,109,0,23,Chilliwack Airport,"Lower Mainland, Vancouver Island",,0,,0.032,0.551,0.0,0.124,0.293
 2019-10-12,2019-10-12,1,9,9,105,1,28,Grand Forks City Hall,"Lower Mainland, Vancouver Island, Southern Interior",,0,,0.021,0.803,0.003,0.071,0.102
 2018-06-20,2018-06-20,1,9,9,99,0,23,Fort St John Key Learning Centre,"Omineca-Peace, Lower Mainland, Cariboo",,0,,0.782,0.041,0.173,0.001,0.003
