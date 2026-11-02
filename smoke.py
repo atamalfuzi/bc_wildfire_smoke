@@ -29,7 +29,7 @@ def join_moved(f, merges):
     """Carry moved stations under one name, using BC's table. Where a day has two rows, keep the one with more hours."""
     f = f.copy()
     f["raw"] = data.clean_name(f.STATION_NAME)
-    f["st"] = f.raw.map(merges).fillna(f.raw)
+    f["st"] = f.raw.replace(merges.to_dict())
     return f.sort_values("n").drop_duplicates(["st", "DATE"], keep="last")
 
 

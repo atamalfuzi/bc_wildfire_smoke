@@ -1,4 +1,6 @@
 """The smoke rule and the panel, on made-up data."""
+import warnings
+
 import numpy as np
 import pandas as pd
 
@@ -75,6 +77,15 @@ def test_moved_station_joins_and_keeps_the_fuller_row():
     assert sorted(out["mean"]) == [2.0, 3.0]
     assert set(out.st) == {"Town"}
     assert set(out.raw) == {"New Site"}
+
+
+def test_join_moved_is_one_step_and_quiet_with_no_merges():
+    f = pd.DataFrame({"STATION_NAME": ["A", "B", "C"], "DATE": ["2020-01-01"] * 3, "n": [24] * 3, "mean": [1.0, 2.0, 3.0]})
+    out = smoke.join_moved(f, pd.Series({"A": "B", "B": "D"})).sort_values("mean")
+    assert list(out.st) == ["B", "D", "C"]  # A becomes B, and doesn't go on to D
+    with warnings.catch_warnings():
+        warnings.simplefilter("error")
+        assert list(smoke.join_moved(f, pd.Series(dtype=str)).st) == ["A", "B", "C"]
 
 
 def made_up_instruments():
