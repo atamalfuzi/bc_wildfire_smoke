@@ -60,7 +60,7 @@ Smoke's share of annual PM2.5 rose 0.6 points a year since 2005 (0.2 to 1.3), an
 
 ![Smoke sheds](figures/sheds.png)
 
-Clustering stations on how their summer readings move together gives seven groups, stable when seasons are resampled (adjusted Rand index 0.93 against the full data), which overlap only partly with BC's monitoring regions (0.61). Greater Victoria and the south island go with Vancouver and the Fraser Valley, not with Nanaimo or Courtenay. Prince George goes with Quesnel, not the Peace.
+Clustering stations on how their summer readings move together gives seven groups of 3 to 32 stations, stable when seasons are resampled (adjusted Rand index 0.93 against the full data), which overlap only partly with BC's monitoring regions (0.61). Greater Victoria and the south island go with Vancouver and the Fraser Valley, not with Nanaimo or Courtenay. Prince George goes with Quesnel, not the Peace.
 
 ![Days above 25 µg/m³ for the average person, by smoke shed](figures/people.png)
 
@@ -103,7 +103,7 @@ Measuring whether people avoid smoke using Mobi bike-share trips, the one econom
 
 **Province-wide numbers.** Station and year effects, with weights so each of BC's seven monitoring regions counts equally. A plain average moves as monitors open and close.
 
-**Smoke sheds.** Average-linkage clusters on rank correlation of log summer excess, 2014 to 2025, for the 62 stations with at least 500 summer days. The number of clusters is the one that changes least when seasons are resampled, and a cluster under three stations joins the one it correlates with best. Other stations join their nearest neighbour's shed.
+**Smoke sheds.** Average-linkage clusters on rank correlation of log summer excess, 2014 to 2025, for the 62 stations with at least 500 summer days. The number of clusters is the one that changes least when seasons are resampled, and a cluster under three stations joins the one it correlates with best. That number was ten, the most tried (three to ten). Three of the ten clusters held one station each and joined others, which is why `shed_summary.csv` shows k = 10 and seven sheds; cuts at eight, nine and ten all end in the same seven. The sheds hold 32, 7, 6, 6, 4, 4 and 3 of the 62 stations. The smallest, Bulkley Valley, is only Smithers, Houston and Burns Lake, so it rests on very little. Other stations join their nearest neighbour's shed, which adds Telkwa to it.
 
 **People.** BC Stats population by municipality, with each regional district's unincorporated population placed at the area-weighted centre of its other census subdivisions. Each takes the count at its nearest monitor with at least 138 days from May to October that year; 96% to 99% of people live within 100 km of one.
 
